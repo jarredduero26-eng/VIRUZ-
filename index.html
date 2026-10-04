@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unknown Connection</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div>
+        <p class="eyebrow">UNKNOWN CONNECTION</p>
+        <h1>UNKNOWN <span>///</span></h1>
+        <p class="small">A mysterious question game</p>
+      </div>
+      <div class="camera" aria-label="Decorative camera graphic">◉</div>
+    </header>
+
+    <p class="status" id="status">● WAITING FOR PARTICIPANT...</p>
+
+    <section id="startScreen">
+      <h2>Identify yourself.</h2>
+      <p class="small">
+        Enter your name to continue.
+      </p>
+
+      <label for="nameInput">What is your name?</label>
+      <input id="nameInput" type="text" maxlength="30"
+             placeholder="Enter name">
+
+      <label for="pronouns">How should I address you? (optional)</label>
+      <select id="pronouns">
+        <option value="">Skip</option>
+        <option value="She / her">She / her</option>
+        <option value="He / him">He / him</option>
+        <option value="They / them">They / them</option>
+        <option value="Just my name">Just my name</option>
+      </select>
+
+      <button class="primary" id="beginButton">BEGIN</button>
+      <button id="voiceButton">VOICE: ON</button>
+    </section>
+
+    <section id="gameScreen" class="hidden">
+      <div class="progress">
+        <span id="progressText">QUESTION 1 / 20</span>
+        <span>ANSWER REQUIRED</span>
+      </div>
+
+      <div class="bar">
+        <div class="bar-fill" id="barFill"></div>
+      </div>
+
+      <p class="eyebrow">THE INTERROGATION</p>
+      <div class="question" id="questionText"></div>
+
+      <div id="options"></div>
+
+      <label for="answerInput">Your response:</label>
+      <input id="answerInput" type="text" maxlength="180"
+             placeholder="Type your answer...">
+
+      <button class="primary" id="submitButton">SUBMIT ANSWER</button>
+      <button id="declineButton">DECLINE / SKIP</button>
+
+      <div id="warning" class="warning hidden" role="alert">
+        !
+        <div>SKIP REQUEST DETECTED</div>
+        <small>
+          Your response has been marked as DECLINED.
+          Continue only if you want to answer.
+        </small>
+      </div>
+
+      <button id="endButton">END</button>
+    </section>
+
+    <section id="finishScreen" class="hidden center">
+      <h1 class="red">GOTCHA.</h1>
+      <h2 id="finishMessage"></h2>
+      <p>
+        The mystery is over. This was a fictional experience.
+      </p>
+      <p class="small">
+        Nothing was recorded, uploaded, or sent.
+        This page does not access your camera, microphone, files, or accounts.
+      </p>
+      <button class="primary" id="againButton">PLAY AGAIN</button>
+    </section>
+
+    <footer>
+      FICTIONAL EXPERIENCE
+    </footer>
+  </main>
+</body>
+</html>
